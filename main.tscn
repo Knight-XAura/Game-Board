@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://dsb52llvh18f5"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="OverrideFilterLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Override Filter: "
+
+[node name="OverrideFilter" type="OptionButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "No Override"
+popup/item_0/id = 3
+popup/item_1/text = "In Progress"
+popup/item_1/id = 0
+popup/item_2/text = "Stuck"
+popup/item_2/id = 1
+popup/item_3/text = "Needs Work"
+popup/item_3/id = 2
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+placeholder_text = "Version"
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Save Version"
+
+[node name="GameBoard" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+
+[node name="IdeasLabel" type="Label" parent="VBoxContainer/GameBoard/HBoxContainer"]
+layout_mode = 2
+text = "Ideas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewIdea" type="Button" parent="VBoxContainer/GameBoard/HBoxContainer"]
+layout_mode = 2
+text = "+ New"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+
+[node name="PlannedLabel" type="Label" parent="VBoxContainer/GameBoard/HBoxContainer2"]
+layout_mode = 2
+text = "Planned"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewPlanned" type="Button" parent="VBoxContainer/GameBoard/HBoxContainer2"]
+layout_mode = 2
+text = "+ New"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+
+[node name="CompletedLabel" type="Label" parent="VBoxContainer/GameBoard/HBoxContainer3"]
+layout_mode = 2
+text = "Completed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewCompleted" type="Button" parent="VBoxContainer/GameBoard/HBoxContainer3"]
+layout_mode = 2
+text = "+ New"
+
+[node name="IdeasBox" type="VBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PlannedBox" type="VBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CompletedBox" type="VBoxContainer" parent="VBoxContainer/GameBoard"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
